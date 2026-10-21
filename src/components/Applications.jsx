@@ -3,7 +3,7 @@ import AppliTable from './AppliTable'
 import StatusUpdateModal from './StatusUpdateModal'
 import { useState } from 'react'
 
-const Applications = ({ applications, setApplications, setStatusCount, setShowSidebar }) => {
+const Applications = ({ applications, setApplications, setShowSidebar }) => {
     const [status, setStatus] = useState("all");
     const [modal, setModal] = useState({ show: false, appli: null });
 
@@ -72,7 +72,7 @@ const Applications = ({ applications, setApplications, setStatusCount, setShowSi
                 </table>
             </div>
 
-            <StatusUpdateModal modal={modal} setModal={setModal} setApplications={setApplications} setStatusCount={setStatusCount} />
+            <StatusUpdateModal modal={modal} setModal={setModal} setApplications={setApplications} />
         </>
     )
 }

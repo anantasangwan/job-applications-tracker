@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import Navbar from './Navbar'
 
-const AddApplication = ({ setApplications, setStatusCount, setShowSidebar }) => {
+const AddApplication = ({ setApplications, setShowSidebar }) => {
   const {
     register,
     handleSubmit,
@@ -33,13 +33,6 @@ const AddApplication = ({ setApplications, setStatusCount, setShowSidebar }) => 
 
     // ==== update parent's state ====
     setApplications(applications => [data, ...applications]);
-
-    setStatusCount((statusCount) => {
-      return {
-        ...statusCount,  // preserves all other counts 
-        [data.status]: statusCount[data.status] + 1  // store & update the count for _ status 
-      }
-    });
 
     reset();  // -- Resets all input fields to their default values --
   }

@@ -1,7 +1,7 @@
 import cancel from "../assets/cancel.svg";
 import { useRef } from "react";
 
-const StatusUpdateModal = ({ modal, setModal, setApplications, setStatusCount }) => {
+const StatusUpdateModal = ({ modal, setModal, setApplications }) => {
     const inputRef = useRef();
 
     const handleSave = () => {
@@ -13,15 +13,6 @@ const StatusUpdateModal = ({ modal, setModal, setApplications, setStatusCount })
             setModal({ show: false, appli: null });
             return;
         }
-
-        // --- update the statusCount ---
-        setStatusCount((statusCount) => {
-            return {
-                ...statusCount,
-                [oldStatus]: statusCount[oldStatus] - 1,
-                [newStatus]: statusCount[newStatus] + 1
-            }
-        });
 
         setApplications((applications) => {
             // --- update the status + addedOn date (recents display) of the matching application ---
