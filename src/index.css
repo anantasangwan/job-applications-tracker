@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --charcoalTxt: #393A3B;
+  --coralpinkTxt: #fe5d44;
+  --bgBtn: #f87061;
+}
+
+@theme inline {
+  --color-charcoalTxt: var(--charcoalTxt);
+  --color-coralpinkTxt: var(--coralpinkTxt);
+  --color-bgBtn: var(--bgBtn);
+}
+
+@theme {
+  --breakpoint-xs: 450px;
+  --breakpoint-2md: 950px;
+  --font-inter: "Inter", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-syne: "Syne Mono", monospace;
+}
+
+/* --- Buttons --- */
+.addBtn {
+  @apply bg-bgBtn ml-auto px-2.5 py-1.5 rounded-md m-1 text-white font-semibold text-sm text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer;
+}
+
+.backBtn {
+  @apply bg-charcoalTxt/80 ml-auto px-2.5 py-1.5 rounded-md m-1 text-white font-semibold text-sm text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer;
+}
+
+.navBtn {
+  @apply max-xs:text-[13px] max-xs:py-1 max-xs:px-1.75;
+}
+
+.actionBtn {
+  @apply bg-charcoalTxt/25 ml-auto px-2.5 py-0.5 rounded-md m-1 font-semibold text-sm text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer;
+}
+
+/* --- left sidebar NavLink --- */
+.navlink {
+  @apply ml-3 mb-3 px-5 py-2.5 max-sm:py-2 font-bold font-montserrat rounded-md border border-white w-[90%] hover:bg-[#fcd9ef] hover:border-[#ea159c] transition-all duration-150 ease-in-out flex items-center gap-4;
+}
+
+.active {
+  @apply bg-[#DCF4DA] border border-[#15ac07];
+}
+
+/* --- Dashboard Cards --- */
+.card {
+  @apply shrink-0 border-t-3 min-w-45 px-4 py-3 rounded-lg space-y-1 cursor-pointer;
+}
+
+.card div:first-child {
+  @apply flex items-center gap-3 font-syne text-3xl font-extrabold;
+}
+
+.card div:first-child img {
+  @apply h-7.5 p-1.25 bg-white rounded-full flex items-center justify-center;
+}
+
+.card div:last-child {
+  @apply text-charcoalTxt font-bold font-inter text-sm pl-2.5;
+}
+
+@media screen and (max-width: 1020px) {
+  .overviewCards {
+    @apply grid grid-cols-3;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .overviewCards {
+    @apply grid grid-cols-2;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .overviewCards {
+    @apply grid grid-cols-1;
+  }
+}
+
+/* ---- Dashboard Applications Pipeline --- */
+/* --- minmax(0, 1fr): let this column take the remaining available space, but allow it to shrink to 0 --- */
+.pipeline {
+  @apply grid grid-cols-[80px_minmax(100px,_1fr)_27px] max-xs:grid-cols-[70px_minmax(100px,_1fr)_27px] items-center gap-x-1.5 xs:gap-x-4 w-full px-6 max-sm:px-3;
+}
+
+.pipeline:last-child {
+  @apply mb-7 max-xs:mb-4;
+}
+
+.pipeline p {
+  @apply text-charcoalTxt font-semibold max-xs:text-sm;
+}
+
+.pipeline input[type="range"] {
+  @apply cursor-pointer appearance-none rounded-full h-1.75 shrink-0;
+}
+
+.pipeline input[type="range"]::-webkit-slider-thumb {
+  /* -- removes the browser's default thumb styling -- */
+  appearance: none;
+  /* -- make the thumb invisible -- */
+  width: 0;
+  height: 0;
+}
+
+
+/* --- Dashboard Activities --- */
+.activity {
+  @apply grid grid-cols-[minmax(150px,2fr)_minmax(100px,1fr)_77px] items-center gap-x-3 max-xs:gap-x-1 w-full px-6 max-sm:px-4 py-1.5 border-b border-b-charcoalTxt/25;
+}
+/* grid-cols-[minmax(150px,_1fr)_minmax(100px,_120px)_77px] */
+.activity:last-child {
+  @apply border-none;
+}
+
+.activity div h3 {
+  @apply font-bold font-inter -mb-1 truncate;
+}
+.activity div h4 {
+  @apply text-[15px] font-semibold text-charcoalTxt truncate;
+}
+.activity .p1{
+  @apply w-fit px-3 max-xs:px-2 py-0.5 rounded-full border font-semibold;
+}
+.activity .p2 {
+  @apply text-sm font-semibold w-fit justify-self-center;
+}
+
+.viewAll {
+  @apply bg-bgBtn/35 px-2.5 max-xs:px-1.5 py-0.5  rounded-md text-sm font-semibold border border-bgBtn hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .activity {
+    @apply flex flex-col items-center justify-center;
+  }
+  .activity div {
+    @apply self-start -mb-3 max-w-37.5 truncate;
+  }
+  .activity .p1 {
+    @apply self-end -mt-3;
+  }
+  .activity .p2 {
+    @apply self-start text-charcoalTxt/70;
+  }
+}
+
+/* ---- Add new Application Form */
+form {
+  @apply w-full self-center h-full p-4 max-xs:p-1.5 flex flex-col mx-8 mb-6 max-sm:mx-4 max-xs:mx-3.5;
+}
+
+.inputDiv {
+  @apply rounded-2xl px-4 max-xs:px-2 py-1.5 m-1 max-xs:m-0 flex flex-col gap-1;
+}
+
+.inputDiv label {
+  @apply font-montserrat font-semibold;
+}
+
+.inputDiv p {
+  @apply font-montserrat text-sm italic font-semibold px-2;
+}
+
+.inputDiv input,
+.inputDiv select {
+  @apply w-full max-w-262.5 rounded-lg border border-charcoalTxt/15 bg-white px-4 py-1 text-charcoalTxt text-[17px] outline-none focus:border-charcoalTxt/45 inset-shadow-sm inset-shadow-charcoalTxt/10 focus:inset-shadow-charcoalTxt/15;
+}
+
+input[type='submit'] {
+  @apply bg-bgBtn px-2.5 py-1.5 mx-7 mt-4 w-[35%] rounded-md m-1 text-white font-montserrat font-semibold text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer max-md:w-[90%] max-md:self-center max-md:mx-4;
+}
+
+
+/* ---- Applications/ Follow-ups Table ---- */
+/* table-fixed utility ignores the content of the table cells and distributes the available table width equally across columns */
+table {
+  @apply w-[95%] min-w-[950px] table-fixed relative bg-white rounded-2xl shadow-md mb-20;
+}
+
+th {
+  @apply sticky top-0 border-r border-r-charcoalTxt/10 bg-[#E8E8EC] font-bold font-montserrat py-1.5 max-sm:text-sm shadow-sm;
+}
+
+th:last-child {
+  @apply border-none;
+}
+
+tr {
+  @apply px-2 py-1 border-b border-b-charcoalTxt/10 hover:bg-charcoalTxt/4;
+}
+tr:last-child {
+  @apply border-none;
+}
+
+td {
+  @apply whitespace-normal break-words font-semibold text-center px-2 py-2 border-r border-r-charcoalTxt/10 max-sm:text-sm cursor-pointer;
+}
+
+td:last-child {
+  @apply border-none;
+}
+
+.filters button {
+  @apply w-fit px-3 py-0.5 rounded-full border border-charcoalTxt/20 bg-white shrink-0 font-semibold hover:bg-charcoalTxt/10 hover:border-charcoalTxt/40 shadow-2xs;
+}
+/* -- just to increase specificity & prioritize these styles -- */
+body .filters .filterBtn {
+  @apply  bg-[#fcd9ef] border-[#ea159c];
+}
+
+/* --- sideBar styles --- */
+.sideBar {
+  @apply w-[20%] z-30 h-dvh shrink-0 border-r border-r-charcoalTxt/10 bg-white flex flex-col transition-all duration-300 ease-in-out;
+}
+
+/* --- sideBar responsiveness --- */
+@media screen and (width <  1280px ) {
+  .sideBar {
+    @apply fixed -left-96 w-[min(280px,86vw)];
+  }
+  .showSidebar {
+    @apply left-0;
+  }
+}
