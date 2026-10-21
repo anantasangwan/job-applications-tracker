@@ -11,6 +11,13 @@ const Applications = ({ applications, setApplications, setShowSidebar }) => {
         setModal({ show: true, appli: applications.find(appli => appli.id === id) });
     }
 
+    const handleDelete = (id) => {
+        // --- deletes the matching application ---
+        setApplications(applications => {
+            return applications.filter(appli => appli.id !== id);
+        });
+    }
+
     return (
         <>
             <Navbar header="Applications" setShowSidebar={setShowSidebar} />
@@ -67,7 +74,7 @@ const Applications = ({ applications, setApplications, setShowSidebar }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <AppliTable applications={applications} status={status} handleStatusUpdate={handleStatusUpdate} />
+                        <AppliTable applications={applications} status={status} handleStatusUpdate={handleStatusUpdate} handleDelete={handleDelete} />
                     </tbody>
                 </table>
             </div>

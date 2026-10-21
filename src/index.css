@@ -8,6 +8,7 @@
   --charcoalTxt: #393A3B;
   --coralpinkTxt: #fe5d44;
   --bgBtn: #f87061;
+  
 }
 
 @theme inline {
@@ -44,10 +45,10 @@
 
 /* --- left sidebar NavLink --- */
 .navlink {
-  @apply ml-3 mb-3 px-5 py-2.5 max-sm:py-2 font-bold font-montserrat rounded-md border border-white w-[90%] hover:bg-[#fcd9ef] hover:border-[#ea159c] transition-all duration-150 ease-in-out flex items-center gap-4;
+  @apply ml-3 mb-3 px-5 py-2.5 max-sm:py-2 font-bold font-montserrat rounded-md outline-none border border-white w-[90%] hover:bg-[#fcd9ef] hover:border-[#ea159c] transition-all duration-150 ease-in-out flex items-center gap-4;
 }
 
-.active {
+.sideBar .active {
   @apply bg-[#DCF4DA] border border-[#15ac07];
 }
 
@@ -184,11 +185,11 @@ input[type='submit'] {
 /* ---- Applications/ Follow-ups Table ---- */
 /* table-fixed utility ignores the content of the table cells and distributes the available table width equally across columns */
 table {
-  @apply w-[95%] min-w-[950px] table-fixed relative bg-white rounded-2xl shadow-md mb-20;
+  @apply w-[95%] min-w-[960px] table-fixed relative bg-white rounded-2xl shadow-md mb-20;
 }
 
 th {
-  @apply sticky top-0 border-r border-r-charcoalTxt/10 bg-[#E8E8EC] font-bold font-montserrat py-1.5 max-sm:text-sm shadow-sm;
+  @apply sticky top-0 z-5 border-r border-r-charcoalTxt/10 bg-[#E8E8EC] font-bold font-montserrat py-1.5 max-sm:text-sm shadow-sm;
 }
 
 th:last-child {
@@ -201,9 +202,12 @@ tr {
 tr:last-child {
   @apply border-none;
 }
+tr:last-child td {
+  @apply pb-3;
+}
 
 td {
-  @apply whitespace-normal break-words font-semibold text-center px-2 py-2 border-r border-r-charcoalTxt/10 max-sm:text-sm cursor-pointer;
+  @apply whitespace-normal break-words font-semibold text-center px-1.5 py-1.5 border-r border-r-charcoalTxt/10 max-sm:text-sm cursor-pointer;
 }
 
 td:last-child {

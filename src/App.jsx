@@ -22,7 +22,6 @@ function App() {
     localStorage.setItem("applications", JSON.stringify(applications));
   }, [applications]);
 
-
   return (
     <div className='flex w-full h-dvh overflow-hidden'>
       <Left showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
@@ -31,7 +30,7 @@ function App() {
       {showSidebar && (
         <div
           onClick={() => setShowSidebar(false)}
-          className="xl:hidden fixed inset-0 z-10 bg-black/30"
+          className="xl:hidden fixed inset-0 z-20 bg-black/30"
         />
       )}
 
