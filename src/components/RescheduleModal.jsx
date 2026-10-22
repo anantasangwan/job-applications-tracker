@@ -34,7 +34,7 @@ const RescheduleModal = ({ modal, setModal, setApplications }) => {
             {/* --- card - display the content --- */}
             <div className="inputDiv font-montserrat z-50 w-[50%] max-md:w-[90%] h-fit bg-white rounded-lg flex flex-col gap-3 py-6 px-9">
 
-                <img src={cancel} alt="" onClick={() => setModal({ show: false, appli: null })} className="h-6.75 w-6.75 ml-auto mt-2 cursor-pointer hover:scale-95 transition-all duration-150 ease-in-out" />
+                <img src={cancel} alt="" onClick={() => setModal({ show: false, appli: null })} className="h-6 w-6 ml-auto mt-2 cursor-pointer hover:scale-95 transition-all duration-150 ease-in-out" />
                 <h2 className="text-[20px] font-bold">Reschedule Follow-up</h2>
                 <h5 className="text-[17px] font-semibold italic text-charcoalTxt mb-4">
                     {modal.appli.company} • {modal.appli.position}

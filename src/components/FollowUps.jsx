@@ -70,7 +70,7 @@ const FollowUps = ({ applications, setApplications, setShowSidebar }) => {
             <Navbar header="Follow-ups" setShowSidebar={setShowSidebar} />
 
             <div className="space-y-0.5 mt-7 mx-7 max-xs:mx-3.5 max-sm:mt-6 max-xs:mt-3.5">
-                <h2 className="text-xl font-montserrat font-bold">Keep the Conversation Going</h2>
+                <h2 className="text-xl max-xs:text-[19px] font-montserrat font-bold">Keep the Conversation Going</h2>
                 <p className="text-sm text-charcoalTxt/80 font-semibold ml-2 italic">Track upcoming follow-ups and stay connected with recruiters throughout your job search.</p>
             </div>
 
@@ -117,31 +117,32 @@ const FollowUps = ({ applications, setApplications, setShowSidebar }) => {
                 </div>
             </div>
 
-            <div className="w-full overflow-x-scroll scrollbar-none px-5 max-xs:px-3 my-1 self-center">
-                <table style={{minWidth: "800px"}}>
-                    <thead className='border-b border-b-charcoalTxt/10'>
-                        <tr>
-                            <th className="rounded-tl-lg">Company</th>
-                            <th>Position</th>
-                            <th>Follow Up Date</th>
-                            <th>Status</th>
-                            <th className="rounded-tr-lg">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {applications.length === 0 ?
-                            (<tr>
-                                <td colSpan={5} style={{ textAlign: "center", padding: "40px" }}>
-                                    <p style={{ fontSize: "19px" }}>No applications yet.</p>
-                                    <p style={{ fontSize: "15px" }}>Add your first application to get started!</p>
-                                </td>
-                            </tr>) :
-                            <FollowupTable followups={{ upcoming, overdue, duetoday, completed }} status={status} choices={choices} handleCompletion={handleCompletion} handleReschedule={handleReschedule} />
-                        }
-                    </tbody>
-                </table>
+            <div>
+                <div className="w-full overflow-x-scroll scrollbar-none px-5 max-xs:px-3 my-1 self-center">
+                    <table className="w-[95%] min-w-200">
+                        <thead className='border-b border-b-charcoalTxt/10'>
+                            <tr>
+                                <th className="rounded-tl-lg">Company</th>
+                                <th>Position</th>
+                                <th>Follow Up Date</th>
+                                <th>Status</th>
+                                <th className="rounded-tr-lg">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {applications.length === 0 ?
+                                (<tr>
+                                    <td colSpan={5} style={{ textAlign: "center", padding: "40px" }}>
+                                        <p style={{ fontSize: "19px" }}>No applications yet.</p>
+                                        <p style={{ fontSize: "15px" }}>Add your first application to get started!</p>
+                                    </td>
+                                </tr>) :
+                                <FollowupTable followups={{ upcoming, overdue, duetoday, completed }} status={status} choices={choices} handleCompletion={handleCompletion} handleReschedule={handleReschedule} />
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
             <RescheduleModal modal={modal} setModal={setModal} setApplications={setApplications} />
         </>
     )

@@ -18,7 +18,7 @@ const Left = ({ showSidebar, setShowSidebar }) => {
           </div>
         </div>
 
-        <img onClick={()=>setShowSidebar(false)} src={cancel} alt="" className="xl:hidden h-6.75 w-6.75 ml-auto -m-2 -mt-3 self-start cursor-pointer" />
+        <img onClick={()=>setShowSidebar(false)} src={cancel} alt="" className="xl:hidden h-5.25 w-5.25 ml-auto -m-2 -mt-3 self-start cursor-pointer" />
       </div>
 
 
@@ -44,7 +44,7 @@ const Left = ({ showSidebar, setShowSidebar }) => {
         </NavLink>
       </div>
 
-      <div className="text-charcoalTxt text-sm text-center font-semibold p-3 pt-6 max-sm:pt-3.5 mt-auto mb-2 border-t border-t-charcoalTxt/15">
+      <div className="text-charcoalTxt text-sm text-center font-semibold p-3 pt-6 max-sm:pt-3.5 mt-auto border-t border-t-charcoalTxt/15">
         • HTML • Tailwind CSS • React JS
       </div>
     </div>

@@ -61,7 +61,7 @@ const Applications = ({ applications, setApplications, setShowSidebar }) => {
             </div>
 
             <div className="w-full overflow-x-scroll scrollbar-none px-5 my-1 self-center">
-                <table>
+                <table className='w-[95%] min-w-240'>
                     <thead className='border-b border-b-charcoalTxt/10'>
                         <tr>
                             <th className="rounded-tl-lg">Company</th>

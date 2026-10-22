@@ -13,7 +13,7 @@ const ApplicationPipeline = ({ statusCount }) => {
   ];
 
   return (
-    <div className="shrink-0 space-y-4 max-xs:space-y-3 mt-7 max-2md:mt-5 max-xs:mt-2.5 py-4 max-xs:py-2.5 rounded-lg shadow-md bg-white w-[46%] max-2md:flex-1 max-2md:w-auto border border-charcoalTxt/25">
+    <div className="shrink-0 space-y-4 max-xs:space-y-3 mt-6 max-2md:mt-5 max-xs:mt-2.5 py-4 max-xs:py-2.5 rounded-lg shadow-md bg-white w-[46%] max-2md:flex-1 max-2md:w-auto border border-charcoalTxt/25">
       <h2 className="text-[18px] font-bold font-montserrat px-5 mb-5 pb-4 max-xs:pb-2.5 border-b border-b-charcoalTxt/25">
         Application Pipeline
       </h2>

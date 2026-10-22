@@ -32,7 +32,7 @@
 }
 
 .backBtn {
-  @apply bg-charcoalTxt/80 ml-auto px-2.5 py-1.5 rounded-md m-1 text-white font-semibold text-sm text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer;
+  @apply bg-charcoalTxt/80 ml-auto px-2.5 py-1.5 rounded-md m-1 text-white font-semibold text-sm text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer flex items-center gap-0.5;
 }
 
 .navBtn {
@@ -45,7 +45,7 @@
 
 /* --- left sidebar NavLink --- */
 .navlink {
-  @apply ml-3 mb-3 px-5 py-2.5 max-sm:py-2 font-bold font-montserrat rounded-md outline-none border border-white w-[90%] hover:bg-[#fcd9ef] hover:border-[#ea159c] transition-all duration-150 ease-in-out flex items-center gap-4;
+  @apply ml-2 max-sm:ml-0 mb-3 px-4 max-sm:px-2.5 py-2.5 max-sm:py-2 font-bold font-montserrat rounded-md outline-none border border-white w-[95%] hover:bg-[#fcd9ef] hover:border-[#ea159c] transition-all duration-150 ease-in-out flex items-center gap-4;
 }
 
 .sideBar .active {
@@ -157,7 +157,7 @@
 
 /* ---- Add new Application Form */
 form {
-  @apply w-full self-center h-full p-4 max-xs:p-1.5 flex flex-col mx-8 mb-6 max-sm:mx-4 max-xs:mx-3.5;
+  @apply w-full self-center h-full p-4 max-xs:p-1.5 flex flex-col mx-8 pb-3 mb-8 max-sm:mx-4 max-xs:mx-3.5;
 }
 
 .inputDiv {
@@ -178,18 +178,18 @@ form {
 }
 
 input[type='submit'] {
-  @apply bg-bgBtn px-2.5 py-1.5 mx-7 mt-4 w-[35%] rounded-md m-1 text-white font-montserrat font-semibold text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer max-md:w-[90%] max-md:self-center max-md:mx-4;
+  @apply bg-bgBtn px-2.5 py-1.5 mx-7 mt-4 w-[35%] rounded-md m-1 mb-5 text-white font-montserrat font-semibold text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer max-md:w-[90%] max-md:self-center max-md:mx-4;
 }
 
 
 /* ---- Applications/ Follow-ups Table ---- */
 /* table-fixed utility ignores the content of the table cells and distributes the available table width equally across columns */
 table {
-  @apply w-[95%] min-w-[960px] table-fixed relative bg-white rounded-2xl shadow-md mb-20;
+  @apply table-fixed relative bg-white rounded-2xl shadow-md mb-20;
 }
 
 th {
-  @apply sticky top-0 z-5 border-r border-r-charcoalTxt/10 bg-[#E8E8EC] font-bold font-montserrat py-1.5 max-sm:text-sm shadow-sm;
+  @apply z-5 border-r border-r-charcoalTxt/10 bg-[#E8E8EC] font-bold font-montserrat py-1.5 max-sm:text-sm shadow-sm;
 }
 
 th:last-child {

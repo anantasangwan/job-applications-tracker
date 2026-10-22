@@ -11,7 +11,7 @@ const Activities = ({recents}) => {
     };
 
     return (
-        <div className="shrink-0 mt-7 max-xs:mt-4 *:px-5 py-4 max-xs:py-2.5 rounded-lg shadow-md bg-white flex-1 border border-charcoalTxt/25 overflow-x-scroll scrollbar-none">
+        <div className="shrink-0 mt-6 max-xs:mt-4 *:px-5 py-4 max-xs:py-2.5 rounded-lg shadow-md bg-white flex-1 border border-charcoalTxt/25 overflow-x-scroll scrollbar-none">
             <div className="pb-5 max-sm:pb-2.5 max-xs:px-3 border-b border-b-charcoalTxt/25 flex items-center gap-3 justify-between">
                 <h2 className="text-[18px] font-bold font-montserrat">
                     Recent Activity

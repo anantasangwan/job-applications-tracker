@@ -34,7 +34,7 @@ function App() {
         />
       )}
 
-      <div className='max-xl:w-full flex-1 min-w-0 min-h-0 overflow-y-scroll scrollbar-none overflow-x-hidden bg-[#f4f3f6] flex flex-col '>
+      <div className='max-xl:w-full flex-1 min-w-0 min-h-0 overflow-y-auto scrollbar-none overflow-x-hidden bg-[#f4f3f6] flex flex-col pb-8'>
         <Routes>
           <Route path='/' element={<Dashboard recents={applications.slice(0, 5)} statusCount={statusCount} setShowSidebar={setShowSidebar} />} />
           <Route path="/add-application" element={<AddApplication setApplications={setApplications} setShowSidebar={setShowSidebar} />} />
