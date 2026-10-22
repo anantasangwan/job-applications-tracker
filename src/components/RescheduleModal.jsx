@@ -32,14 +32,14 @@ const RescheduleModal = ({ modal, setModal, setApplications }) => {
         // --- container - covers the whole page ---
         <div className='fixed inset-0 bg-black/25 z-40 backdrop-blur-sm flex items-center justify-center'>
             {/* --- card - display the content --- */}
-            <div className="inputDiv font-montserrat z-50 w-[50%] max-md:w-[90%] h-fit bg-white rounded-lg flex flex-col gap-3 py-6 px-9">
+            <div className="rounded-2xl font-montserrat z-50 w-[50%] max-md:w-[90%] h-fit bg-white flex flex-col gap-1 py-3 px-9 max-sm:px-3.5">
 
-                <img src={cancel} alt="" onClick={() => setModal({ show: false, appli: null })} className="h-6 w-6 ml-auto mt-2 cursor-pointer hover:scale-95 transition-all duration-150 ease-in-out" />
-                <h2 className="text-[20px] font-bold">Reschedule Follow-up</h2>
-                <h5 className="text-[17px] font-semibold italic text-charcoalTxt mb-4">
+                <img src={cancel} alt="" onClick={() => setModal({ show: false, appli: null })} className="h-6 w-6 ml-auto mt-2 -mb-3.5 shrink-0 cursor-pointer hover:scale-95 transition-all duration-150 ease-in-out" />
+                <h2 className="text-[20px] max-xs:text-[18px] font-bold">Reschedule Follow-up</h2>
+                <h5 className="text-[17px] max-xs:text-base font-semibold italic text-charcoalTxt mb-4">
                     {modal.appli.company} • {modal.appli.position}
                 </h5>
-                <h4 className="text-charcoalTxt font-semibold ml-2">New follow-up date</h4>
+                <h4 className="text-charcoalTxt font-semibold max-xs:text-sm ml-2">New follow-up date</h4>
 
                 <input ref={inputRef}
                     type="date"
@@ -47,6 +47,7 @@ const RescheduleModal = ({ modal, setModal, setApplications }) => {
                     defaultValue={modal.appli.followUpDate}
                     required
                     style={{ padding: "9px", fontSize: "18px", fontWeight: "600" }}
+                    className="input"
                 />
 
                 <div className="ml-auto flex items-center gap-1.5">

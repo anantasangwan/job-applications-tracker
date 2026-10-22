@@ -15,7 +15,7 @@ const AddApplication = ({ setApplications, setShowSidebar }) => {
     await new Promise((resolve) => {
       setTimeout(() => {
         resolve();
-      }, 1500);
+      }, 1000);
     })
 
     data = {

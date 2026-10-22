@@ -173,12 +173,12 @@ form {
 }
 
 .inputDiv input,
-.inputDiv select {
+.inputDiv select, .input {
   @apply w-full max-w-262.5 rounded-lg border border-charcoalTxt/15 bg-white px-4 py-1 text-charcoalTxt text-[17px] outline-none focus:border-charcoalTxt/45 inset-shadow-sm inset-shadow-charcoalTxt/10 focus:inset-shadow-charcoalTxt/15;
 }
 
 input[type='submit'] {
-  @apply bg-bgBtn px-2.5 py-1.5 mx-7 mt-4 w-[35%] rounded-md m-1 mb-5 text-white font-montserrat font-semibold text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer max-md:w-[90%] max-md:self-center max-md:mx-4;
+  @apply bg-bgBtn px-2.5 py-1.5 mx-7 my-4 w-[35%] rounded-md m-1 mb-5 text-white font-montserrat font-semibold text-center outline-none border-none hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer max-md:w-[90%] max-md:self-center max-md:mx-4;
 }
 
 
